@@ -33,6 +33,13 @@ cd $PSScriptRoot
 $repoFolder = $PSScriptRoot
 $env:REPO_FOLDER = $repoFolder
 $koreBuildZip="https://github.com/aspnet/KoreBuild/archive/rel/2.0.0-preview2.zip"
+
+# Find the commit and set the environment variable so that all repos that are built
+# use the exact version of Korebuild
+$findCommitResponse = Invoke-WebRequest -Method HEAD -Uri $koreBuildZip
+$commitId = $findCommitResponse.Headers.ETag.Trim('"')
+$env:KOREBUILD_ZIP = "https://github.com/aspnet/korebuild/archive/$commitId.zip"
+
 if ($env:KOREBUILD_ZIP)
 {
     $koreBuildZip=$env:KOREBUILD_ZIP

@@ -3,6 +3,10 @@ repoFolder="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $repoFolder
 
 koreBuildZip="https://github.com/aspnet/KoreBuild/archive/rel/2.0.0-preview2.zip"
+
+# Find the commit and set the environment variable so that all repos that are built
+# use the exact version of Korebuild
+
 if [ ! -z $KOREBUILD_ZIP ]; then
     koreBuildZip=$KOREBUILD_ZIP
 fi
