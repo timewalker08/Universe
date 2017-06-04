@@ -63,6 +63,15 @@
       IgnoreStandardErrorWarningFormat="true"
       WorkingDirectory="$(BuildRepositoryRoot)" />
 
+    <Message Text="Copying msbuild logs from $(RepositoryToBuild) to Universe artifacts folder" />
+    <ItemGroup>
+      <_MSBuildCopyItems Include="$(BuildRepositoryRoot)artifacts\msbuild\**\*.*" />
+    </ItemGroup>
+
+    <Copy
+      SourceFiles="@(_MSBuildCopyItems)"
+      DestinationFolder="$(RepositoryRoot)artifacts\msbuild\$(RepositoryToBuild)\%(RecursiveDir)" />
+
     <ItemGroup>
       <RepositoryArtifacts Include="$(RepositoryArtifactsDirectory)*" />
       <RepositorySymbolNupkgs Include="$(RepositoryArtifactsDirectory)*.symbols.nupkg" />
