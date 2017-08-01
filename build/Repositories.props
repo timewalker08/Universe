@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Repository Include="Antiforgery" Commit="" CloneUrl="git@github.com:aspnet/%(Identity)" />
+    <Repository Include="AspNetCoreModule" Commit="" CloneUrl="git@github.com:aspnet/%(Identity)" />
     <Repository Include="AzureIntegration" Commit="" CloneUrl="git@github.com:aspnet/%(Identity)" />
     <Repository Include="BasicMiddleware" Commit="" CloneUrl="git@github.com:aspnet/%(Identity)" />
     <Repository Include="BrowserLink" Commit="" CloneUrl="git@github.com:aspnet/%(Identity)" />
