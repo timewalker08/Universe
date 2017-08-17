@@ -46,7 +46,6 @@
     <Repository Include="Security" Commit="" CloneUrl="" />
     <Repository Include="ServerTests" Commit="" CloneUrl="" />
     <Repository Include="Session" Commit="" CloneUrl="" />
-    <Repository Include="SignalR" Commit="" CloneUrl="" />
     <Repository Include="StaticFiles" Commit="" CloneUrl="" />
     <Repository Include="Testing" Commit="" CloneUrl="" />
     <Repository Include="WebSockets" Commit="" CloneUrl="" />
